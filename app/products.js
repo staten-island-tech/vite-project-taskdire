@@ -1,4 +1,4 @@
-import "./style.css";
+import "Food";
 
 const menuItems = [
   { title: "Vegan Burger", price: 10.99, vegan: true, type: "food" },
@@ -9,7 +9,7 @@ const menuItems = [
   { title: "Chicken Stir Fry", price: 12.49, vegan: false, type: "food" },
   { title: "Quinoa Salad", price: 8.99, vegan: true, type: "food" },
   { title: "Caesar Salad", price: 10.99, vegan: false, type: "food" },
-  { title: "Chickpea Curry", price: 9.49, vegan: true, type: "food" }, // Fixed
+  { title: "Chickpea Curry", price: 9.49, vegan: true, type: "food" },
   { title: "Beef Tacos", price: 11.99, vegan: false, type: "food" },
   { title: "Lemonade", price: 3.5, vegan: true, type: "drink" },
   { title: "Iced Coffee", price: 4.0, vegan: false, type: "drink" },
@@ -23,3 +23,5 @@ const menuItems = [
   { title: "Grilled Cheese Sandwich", price: 8.5, vegan: false, type: "food" },
   { title: "Vegetable Samosas", price: 6.0, vegan: true, type: "food" },
 ];
+
+export { Food };
