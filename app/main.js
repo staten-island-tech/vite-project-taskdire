@@ -1,6 +1,6 @@
 import "/style.css";
-import { menuItems } from "./products";
-import { Domselectors } from "./dom";
+import { menuItems } from "/products";
+import { Domselectors } from "/dom";
 
 function Cards() {
   menuItems.forEach((menuItems) => {
@@ -18,3 +18,9 @@ function Cards() {
 }
 
 Cards();
+
+
+document.querySelector("btn").addEventListener("click", function ({
+
+}
+));
