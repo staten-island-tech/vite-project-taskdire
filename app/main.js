@@ -19,8 +19,21 @@ function Cards() {
 
 Cards();
 
-
-document.querySelector("btn").addEventListener("click", function ({
-
+function FilterCards(type) {
+  menuItems
+    .filter((menuItems) => menuItems.type == type)
+    .forEach((menuItems) => {
+      Domselectors.box.insertAdjacentHTML(
+        "beforeend",
+        `<div class="card">
+        <h2>${menuItems.title}</h2>
+        <img src="${menuItems.image}" alt="" class="card-img">
+        <h2>${menuItems.vegan}</h2>
+        <h3>${menuItems.type}</h3>
+        <p>$${menuItems.price}<p>
+      </div>`
+      );
+    });
 }
-));
+
+FilterCards();
