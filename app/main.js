@@ -37,3 +37,10 @@ function FilterCards(type) {
 }
 
 FilterCards();
+
+
+Domselectors.vegan-button.addEventListner("click", function(){
+  Domselectors.container.inner = "";
+
+  FilterCards("vegan")
+});
