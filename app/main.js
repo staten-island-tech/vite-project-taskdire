@@ -36,11 +36,27 @@ function FilterCards(type) {
     });
 }
 
+/*  <button class="Vegan">Vegan</button>
+<button class="Nonvegan">Non-Vegan</button>
+<button class="Food">Food</button>
+<button class="Drinks">Drink</button>
+<button class="Price">Price</button>*/
+
+
 FilterCards();
 
-
-Domselectors.vegan-button.addEventListner("click", function(){
+Domselectors["vegan-button"].addEventListener("click", function () {
   Domselectors.container.inner = "";
+  FilterCards("vegan");
+});
 
-  FilterCards("vegan")
+
+Domselectors["Drink"].addEventListener("click", function () {
+  Domselectors.container.inner = "";
+  FilterCards("drink");
+});
+
+Domselectors["Food"].addEventListener("click", function () {
+  Domselectors.container.inner = "";
+  FilterCards("Food");
 });
