@@ -36,14 +36,6 @@ function FilterCards(type) {
     });
 }
 
-/*  <button class="Vegan">Vegan</button>
-<button class="Nonvegan">Non-Vegan</button>
-<button class="Food">Food</button>
-<button class="Drinks">Drink</button>
-<button class="Price">Price</button>*/
-
-
-
 
 Domselectors["vegan"].addEventListener("click", function () {
   Domselectors.container.inner = "";

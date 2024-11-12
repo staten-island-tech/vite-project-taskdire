@@ -129,6 +129,10 @@ img {
 :root {
   --blue: #2948ff;
   --brown: #75372a;
+  --red: #ed340d;
+  --orange:#cb630c;
+
+
 
   --primary: var(--blue);
   --secondary: var(--brown);
@@ -140,8 +144,19 @@ img {
   --h5: 1.5rem;
 }
 
+.warm{
+  --primary: var(--red);
+  --secondary: var(--orange);
+}
+
+.cool{
+  --primary: var(--blue);
+  --secondary: var(--brown);
+}
+
 .background {
   background-color: var(--primary);
+
 }
 
 .main {
