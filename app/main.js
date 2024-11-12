@@ -50,6 +50,10 @@ Domselectors["vegan-button"].addEventListener("click", function () {
   FilterCards("vegan");
 });
 
+Domselectors["vegan-button"].addEventListener("click", function () {
+  Domselectors.container.inner = "";
+  FilterCards("vegan");
+});
 
 Domselectors["Drink"].addEventListener("click", function () {
   Domselectors.container.inner = "";
