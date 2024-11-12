@@ -1,4 +1,4 @@
-/* Add styles to ensure buttons appear at the top */
+/* General reset and styling */
 html, body, * {
   margin: 0;
   padding: 0;
@@ -10,17 +10,26 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center; /* Centers content horizontally */
+  height: 100vh; /* Ensures the body takes full viewport height */
+  justify-content: flex-start; /* Aligns content to the top */
 }
 
+/* Make sure the button container is at the top center */
 .button-container {
+  position: absolute; /* Positions the container absolutely */
+  top: 10px; /* Optional: adjust distance from the top */
+  left: 50%; /* Centers the container horizontally */
+  transform: translateX(-50%); /* Corrects the horizontal position to perfectly center it */
   display: flex;
-  justify-content: center; /* Align buttons in the center horizontally */
+  justify-content: center; /* Aligns buttons horizontally */
   gap: 1rem; /* Space between buttons */
   padding: 1rem; /* Padding around the button container */
-  width: 100%; /* Full width for the button container */
-  background-color: #ff08083b; /* Optional, gives the top section a background */
+  background-color: #ff08083b; /* Optional background color */
+  border-radius: 8px; /* Optional rounded corners for the button container */
+  z-index: 10; /* Makes sure the buttons stay on top of other content */
 }
 
+/* Button styles */
 button {
   padding: 0.5rem 1rem; /* Padding for buttons */
   margin: 0; /* No extra margin */
@@ -35,14 +44,17 @@ button:hover {
   background-color: #2980b9; /* Hover effect */
 }
 
+/* Container for the cards */
 .container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   padding: 2rem;
   width: 100%; /* Ensures the container takes full width */
+  margin-top: 80px; /* Ensure content starts below the button container */
 }
 
+/* Card styles */
 .card {
   width: 22%;
   height: auto;
@@ -62,77 +74,12 @@ img {
   object-fit: cover;
 }
 
-/* Add styles to ensure buttons appear at the top */
-html, body, * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-size: 10px;
-}
-
-body {
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Centers content horizontally */
-}
-
-.button-container {
-  display: flex;
-  justify-content: center; /* Align buttons in the center horizontally */
-  gap: 1rem; /* Space between buttons */
-  padding: 1rem; /* Padding around the button container */
-  width: 100%; /* Full width for the button container */
-  background-color: #ff08083b; /* Optional, gives the top section a background */
-}
-
-button {
-  padding: 0.5rem 1rem; /* Padding for buttons */
-  margin: 0; /* No extra margin */
-  border: none;
-  border-radius: 4px;
-  background-color: #000000; /* Button background color */
-  color: rgb(255, 255, 255);
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #2980b9; /* Hover effect */
-}
-
-.container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  padding: 2rem;
-  width: 100%; /* Ensures the container takes full width */
-}
-
-.card {
-  width: 22%;
-  height: auto;
-  border: 4px solid burlywood;
-  border-radius: 12px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  margin: 1rem;
-  background-color: beige;
-}
-
-img {
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
-}
-
+/* Color and font settings */
 :root {
   --blue: #2948ff;
   --brown: #75372a;
   --red: #ed340d;
-  --orange:#cb630c;
-
-
+  --orange: #cb630c;
 
   --primary: var(--blue);
   --secondary: var(--brown);
@@ -144,19 +91,18 @@ img {
   --h5: 1.5rem;
 }
 
-.warm{
+.warm {
   --primary: var(--red);
   --secondary: var(--orange);
 }
 
-.cool{
+.cool {
   --primary: var(--blue);
   --secondary: var(--brown);
 }
 
-.background {
+.title {
   background-color: var(--primary);
-
 }
 
 .main {
@@ -182,4 +128,3 @@ h4 {
 h5 {
   font-size: var(--h5);
 }
-

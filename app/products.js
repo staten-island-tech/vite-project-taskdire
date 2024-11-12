@@ -189,5 +189,5 @@ const menuItems = [
     image: "url_to_vegetable_samosas_image",
   },
 ];
-
+menuItems.filter((item) => item.vegan === true).forEach((i) => console.log(i));
 export { menuItems };

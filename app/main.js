@@ -18,10 +18,19 @@ function Cards() {
 }
 
 Cards();
+/* function filtercaard(){
+  items = menuItems.filter((menuItem)=>menuItem.
+  //filter out the filter   
+  )
+  items.forEach((item)=> 
+    //make card
 
+  )
+} */
 function FilterCards(type) {
+  Domselectors.container.inner = "";
   menuItems
-    .filter((menuItems) => menuItems.type == type)
+    .filter((menuItem) => menuItem.type == type)
     .forEach((menuItems) => {
       Domselectors.box.insertAdjacentHTML(
         "beforeend",
@@ -36,23 +45,22 @@ function FilterCards(type) {
     });
 }
 
-
 Domselectors["vegan"].addEventListener("click", function () {
-  Domselectors.container.inner = "";
-  FilterCards("vegan");
+  FilterCards("true");
 });
 
 Domselectors["nonvegan"].addEventListener("click", function () {
-  Domselectors.container.inner = "";
-  FilterCards("nonvegan");
+  FilterCards("true");
 });
 
 Domselectors["Drink"].addEventListener("click", function () {
-  Domselectors.container.inner = "";
-  FilterCards("drink");
+  FilterCards("true");
 });
 
 Domselectors["food"].addEventListener("click", function () {
-  Domselectors.container.inner = "";
-  FilterCards("drink");
+  FilterCards("true");
 });
+
+//reove all cards
+//filter cards
+//print the filtered cards
