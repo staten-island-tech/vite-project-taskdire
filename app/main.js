@@ -45,14 +45,14 @@ function FilterCards(type) {
 
 
 
-Domselectors["vegan-button"].addEventListener("click", function () {
+Domselectors["vegan"].addEventListener("click", function () {
   Domselectors.container.inner = "";
   FilterCards("vegan");
 });
 
-Domselectors["vegan-button"].addEventListener("click", function () {
+Domselectors["nonvegan"].addEventListener("click", function () {
   Domselectors.container.inner = "";
-  FilterCards("vegan");
+  FilterCards("nonvegan");
 });
 
 Domselectors["Drink"].addEventListener("click", function () {
@@ -60,7 +60,7 @@ Domselectors["Drink"].addEventListener("click", function () {
   FilterCards("drink");
 });
 
-Domselectors["Food"].addEventListener("click", function () {
+Domselectors["food"].addEventListener("click", function () {
   Domselectors.container.inner = "";
-  FilterCards("Food");
+  FilterCards("drink");
 });
