@@ -43,7 +43,7 @@ function FilterCards(type) {
 <button class="Price">Price</button>*/
 
 
-FilterCards();
+
 
 Domselectors["vegan-button"].addEventListener("click", function () {
   Domselectors.container.inner = "";
