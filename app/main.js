@@ -27,7 +27,7 @@ function FilterCards(type) {
         "beforeend",
         `<div class="card">
         <h2>${menuItems.title}</h2>
-        <img src="${menuItems.image}" alt="" class="card-img">
+        <img src="${menuItems.image}" alt="${menuItems.description}" class="card-img">
         <h2>${menuItems.vegan}</h2>
         <h3>${menuItems.type}</h3>
         <p>$${menuItems.price}<p>
