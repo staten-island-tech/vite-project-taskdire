@@ -3,64 +3,52 @@ import { menuItems } from "/products";
 import { Domselectors } from "/dom";
 
 function Cards() {
-  menuItems.forEach((menuItems) => {
+  menuItems.forEach((menuItem) => {
     Domselectors.box.insertAdjacentHTML(
       "beforeend",
       `<div class="card">
-        <h2>${menuItems.title}</h2>
-        <img src="${menuItems.image}" alt="" class="card-img">
-        <h2>${menuItems.vegan}</h2>
-        <h3>${menuItems.type}</h3>
-        <p>$${menuItems.price}<p>
+        <h2>${menuItem.title}</h2>
+        <img src="${menuItem.image}" alt="${menuItem.title}" class="card-img">
+        <h2>${menuItem.typev}</h2>
+        <h3>${menuItem.type}</h3>
       </div>`
     );
   });
 }
 
 Cards();
-/* function filtercaard(){
-  items = menuItems.filter((menuItem)=>menuItem.
-  //filter out the filter   
-  )
-  items.forEach((item)=> 
-    //make card
 
-  )
-} */
 function FilterCards(type) {
-  Domselectors.container.inner = "";
-  menuItems
-    .filter((menuItem) => menuItem.type == type)
-    .forEach((menuItems) => {
-      Domselectors.box.insertAdjacentHTML(
-        "beforeend",
-        `<div class="card">
-        <h2>${menuItems.title}</h2>
-        <img src="${menuItems.image}" alt="${menuItems.description}" class="card-img">
-        <h2>${menuItems.vegan}</h2>
-        <h3>${menuItems.type}</h3>
-        <p>$${menuItems.price}<p>
+  const filteredItems = menuItems.filter((item) => item.type === type || item.typev === type);
+  filteredItems.forEach((menuItem) => {
+    Domselectors.box.insertAdjacentHTML(
+      "beforeend",
+      `<div class="card">
+        <h2>${menuItem.title}</h2>
+        <img src="${menuItem.image}" alt="${menuItem.title}" class="card-img">
+        <h2>${menuItem.typev}</h2>
+        <h3>${menuItem.type}</h3>
       </div>`
-      );
-    });
+    );
+  });
 }
 
+Domselectors["food"].addEventListener("click", function () {
+  Domselectors.box.innerHTML = "";  
+  FilterCards("food");
+});
+
+Domselectors["drink"].addEventListener("click", function () {
+  Domselectors.box.innerHTML = "";  
+  FilterCards("drink");
+});
+
 Domselectors["vegan"].addEventListener("click", function () {
-  FilterCards("true");
+  Domselectors.box.innerHTML = "";  
+  FilterCards("vegan");
 });
 
 Domselectors["nonvegan"].addEventListener("click", function () {
-  FilterCards("true");
+  Domselectors.box.innerHTML = "";  
+  FilterCards("nonvegan");
 });
-
-Domselectors["Drink"].addEventListener("click", function () {
-  FilterCards("true");
-});
-
-Domselectors["food"].addEventListener("click", function () {
-  FilterCards("true");
-});
-
-//reove all cards
-//filter cards
-//print the filtered cards
