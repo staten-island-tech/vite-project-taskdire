@@ -1,7 +1,8 @@
 import "/style.css";
 import { menuItems } from "/products";
 import { Domselectors } from "/dom";
-document.querySelector(".btn").addEventListener("click", function () {
+
+document.querySelector(".btn").addEventListener("click", function (e) {
   if (document.body.classList.contains("cool")) {
     document.body.classList.add("warm");
     document.body.classList.remove("cool");
